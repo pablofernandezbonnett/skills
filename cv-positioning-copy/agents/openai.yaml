@@ -1,0 +1,4 @@
+interface:
+  display_name: "CV Positioning Copy"
+  short_description: "Truthful CV and LinkedIn positioning"
+  default_prompt: "Use $cv-positioning-copy to refine a CV, LinkedIn profile, or cover letter from the candidate profile without overselling."

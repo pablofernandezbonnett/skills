@@ -1,0 +1,4 @@
+interface:
+  display_name: "Signal First"
+  short_description: "High-signal, professional response mode for engineering work"
+  default_prompt: "Use $signal-first to keep the response concise, direct, and technically clear without dropping grammar or safety clarity."
