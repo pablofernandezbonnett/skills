@@ -7,6 +7,13 @@ These skills are meant for the Codex desktop/CLI skill system, where each skill
 is a folder with a `SKILL.md` file and optional metadata, references, scripts,
 or assets.
 
+## Status
+
+This repository is read-only for now.
+
+If you want to adapt or extend a skill, fork the repo and use it as a base for
+your own local setup.
+
 Current skills:
 
 - `signal-first`
