@@ -9,10 +9,14 @@ or assets.
 
 ## Status
 
-This repository is read-only for now.
+This repository is public, but read-only by default.
 
 If you want to adapt or extend a skill, fork the repo and use it as a base for
 your own local setup.
+
+If you want to contribute directly to this repository, ask for access first.
+
+Commercial use is not allowed under the default license split.
 
 Current skills:
 
@@ -68,3 +72,8 @@ Use $cv-positioning-copy to refine this CV from the candidate profile.
 Edit skills here first.
 
 Treat `~/.codex/skills` as the installed copy, not the canonical copy.
+
+## Related Documents
+
+- [CONTRIBUTING.md](./CONTRIBUTING.md)
+- [LICENSE](./LICENSE)
