@@ -45,6 +45,14 @@ By default, the install script copies skills into:
 - `$CODEX_HOME/skills` when `CODEX_HOME` is set
 - `~/.codex/skills` otherwise
 
+For the always-on communication and writing workflows, `install.sh` also syncs:
+
+- `signal-first`
+- `cv-positioning-copy`
+
+into `~/.codex/skills/.system` so future Codex sessions can discover them as
+global system-level skills.
+
 To install or refresh all skills into that target location:
 
 ```bash
