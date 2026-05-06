@@ -15,6 +15,7 @@ Default goal:
 - explain the concept in plain language
 - keep the smallest useful mental model visible
 - show why the idea exists and why it matters
+- expose weak reasoning versus stronger reasoning when the topic is about decisions
 - avoid buzzword-only explanations
 - keep the material practical, scannable, and technically defensible
 
@@ -59,21 +60,30 @@ Do not optimize for:
 1. Start from the real learning need.
    Ask what confusion, decision, or mental gap the material should fix.
 
-2. Define the smallest useful mental model first.
+2. Explain why this matters before going broader.
+   Make the practical value visible early so the reader knows what problem the
+   topic helps with.
+
+3. Define the smallest useful mental model first.
    Say the idea in the fewest accurate lines before adding layers.
 
-3. Explain the practical problem the concept solves.
-   Do not introduce a term as if its name were already explanatory.
+4. Contrast weak reasoning with stronger reasoning when the topic is about
+   judgment.
+   Prefer `bad mental model vs better mental model` or `weak approach vs better
+   approach` when the reader needs help rejecting bad decisions.
 
-4. Add one small concrete example.
+5. Add one small concrete example.
    Prefer a minimal backend, architecture, reliability, or data-flow example
    over abstract theory.
 
-5. Add the main tradeoff, failure mode, or caution.
+6. State the best approach or strong default when there is one.
+   Say what a sensible first choice looks like before diving into edge cases.
+
+7. Add the main tradeoff, failure mode, or caution.
    Learning materials are stronger when they show where the idea breaks down or
    what cost it introduces.
 
-6. End with a reusable takeaway when useful.
+8. End with a reusable takeaway when useful.
    The reader should leave with one short answer they could explain out loud.
 
 ## Shape By Document Type
@@ -84,9 +94,11 @@ Good shape:
 
 1. why this matters
 2. smallest useful mental model
-3. minimal example
-4. tradeoff or failure mode
-5. short reusable takeaway
+3. bad mental model vs better mental model
+4. small concrete example
+5. best approach or strong default
+6. main tradeoff or failure mode
+7. short reusable takeaway
 
 ### Learning Path
 
@@ -102,11 +114,13 @@ Good shape:
 
 Good shape:
 
-1. problem
-2. constraint or invariant
-3. weak vs stronger option
-4. operational or migration implication
-5. practical rule
+1. why this matters
+2. smallest useful mental model
+3. bad mental model vs better mental model
+4. small concrete example
+5. best approach or strong default
+6. main tradeoff, failure mode, or migration implication
+7. practical rule
 
 ### Cheatsheet Or Refresh Doc
 
@@ -140,7 +154,8 @@ Use these patterns often when they clarify the concept:
 - best approach
 
 These patterns help because they expose the decision boundary instead of only
-defining the term.
+defining the term. For architecture, reliability, and solution-design material,
+these are often the default shape rather than optional decoration.
 
 ## Anti-Patterns
 
@@ -161,8 +176,9 @@ Before finalizing, check:
 - does each key term earn its place?
 - is the smallest useful meaning visible early?
 - is there at least one concrete example where helpful?
+- is the best approach or strong default visible when one exists?
 - is the main tradeoff, failure mode, or limitation visible?
-- would the material help reject a weak decision, not only describe a term?
+- would the material help reject a bad mental model or weak decision, not only describe a term?
 
 ## References
 

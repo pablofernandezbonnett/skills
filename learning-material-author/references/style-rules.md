@@ -28,9 +28,11 @@ Short rule:
 Good pattern:
 
 1. why this matters
-2. smallest useful meaning
-3. minimal example
-4. tradeoff, failure mode, or caution
+2. smallest useful mental model
+3. bad mental model vs better mental model
+4. small concrete example
+5. best approach or strong default
+6. main tradeoff, failure mode, or caution
 
 ## Plain Language, Not Empty Language
 
@@ -77,8 +79,9 @@ These usually improve learning docs:
 - symptom vs cause
 - target state vs migration reality
 
-Use them when they clarify a decision boundary.
-Do not add them mechanically when a simpler explanation is already enough.
+Use them when they clarify a decision boundary. In architecture, reliability,
+and solution-design material, these are often the best default shape. Do not
+add them mechanically when a simpler explanation is already enough.
 
 ## Learning Paths
 
@@ -112,10 +115,14 @@ If a topic note tries to do all of them equally, it often becomes too broad.
 
 ## Architecture And Reliability Material
 
+- Name why the topic matters before taxonomy or pattern names.
+- Make the smallest mental model visible early.
+- Use `bad mental model vs better mental model` or `weak approach vs better approach` when the topic teaches judgment.
 - Name the invariant or critical rule early.
 - Make the source of truth visible where relevant.
 - Explain what fails under retries, partial failure, or migration.
 - Show the operating or migration consequence, not only the target-state design.
+- Prefer a strong default before edge-case branching when the reader needs decision help.
 
 ## Refresh And Cheatsheet Bias
 
@@ -141,6 +148,7 @@ Before finishing, ask:
 - is the first useful meaning visible early?
 - is any jargon unexplained or underexplained?
 - does the reader get a concrete example where it helps?
+- is the best approach or strong default visible when it should be?
 - is the main tradeoff or failure mode visible?
 - is the text concise without becoming telegraphic?
-- would the material help a real person make or explain a better decision?
+- would the material help a real person reject a weak mental model and explain a better decision?

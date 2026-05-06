@@ -9,7 +9,9 @@ Purpose:
 - explain technical ideas in plain language without dumbing them down
 - avoid jargon without purpose or explanation
 - keep learning materials concise, scannable, and reusable
-- favor practical mental models, small examples, and visible tradeoffs
+- favor practical mental models, small examples, visible tradeoffs, and clear weak-vs-strong reasoning
+
+Use this skill when creating or revising material with a clear teaching shape, especially when the doc should follow a pattern such as `why this matters -> smallest mental model -> weak vs better -> small example -> strong default -> tradeoff`.
 
 Use this skill when creating or revising:
 
@@ -37,5 +39,5 @@ This folder is the source of truth. Install or refresh it into
 Example invocation:
 
 ```text
-Use $learning-material-author to rewrite this architecture note into a clearer learning doc with less jargon and better tradeoff explanations.
+Use $learning-material-author to rewrite this architecture note into a clearer learning doc with less jargon, a stronger mental model, and better tradeoff explanations.
 ```
