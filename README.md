@@ -22,6 +22,7 @@ Current skills:
 
 - `signal-first`
 - `cv-positioning-copy`
+- `learning-material-author`
 
 ## Structure
 
@@ -64,6 +65,7 @@ To install only one skill:
 ```bash
 ./install.sh signal-first
 ./install.sh cv-positioning-copy
+./install.sh learning-material-author
 ```
 
 ## Use
@@ -73,6 +75,7 @@ Once installed, the skills can be invoked from Codex by name, for example:
 ```text
 Use $signal-first to keep this review concise and high-signal.
 Use $cv-positioning-copy to refine this CV from the candidate profile.
+Use $learning-material-author to rewrite this note into clearer study material with less jargon.
 ```
 
 ## Rule

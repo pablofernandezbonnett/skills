@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learning Material Author"
+  short_description: "Clear, practical study and documentation writing"
+  default_prompt: "Use $learning-material-author to rewrite this technical note into clearer learning material with less jargon, a stronger mental model, and more practical tradeoff explanation."
