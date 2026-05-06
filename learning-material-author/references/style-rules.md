@@ -33,6 +33,7 @@ Good pattern:
 4. small concrete example
 5. best approach or strong default
 6. main tradeoff, failure mode, or caution
+7. interview-ready takeaway when the topic teaches a reusable decision pattern
 
 ## Plain Language, Not Empty Language
 
@@ -123,6 +124,7 @@ If a topic note tries to do all of them equally, it often becomes too broad.
 - Explain what fails under retries, partial failure, or migration.
 - Show the operating or migration consequence, not only the target-state design.
 - Prefer a strong default before edge-case branching when the reader needs decision help.
+- When the topic is likely to appear in interviews or design reviews, end with a short reusable answer the reader could say out loud.
 
 ## Refresh And Cheatsheet Bias
 
@@ -152,3 +154,4 @@ Before finishing, ask:
 - is the main tradeoff or failure mode visible?
 - is the text concise without becoming telegraphic?
 - would the material help a real person reject a weak mental model and explain a better decision?
+- if the topic is interview-relevant, is there a short reusable answer or defense line?

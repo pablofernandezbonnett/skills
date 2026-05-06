@@ -86,6 +86,11 @@ Do not optimize for:
 8. End with a reusable takeaway when useful.
    The reader should leave with one short answer they could explain out loud.
 
+9. Add an interview-ready takeaway when the material teaches design or pattern
+   choice.
+   If the reader may need to defend the idea in an interview or design review,
+   give them one short, reusable answer shape.
+
 ## Shape By Document Type
 
 ### Topic Note
@@ -99,6 +104,7 @@ Good shape:
 5. best approach or strong default
 6. main tradeoff or failure mode
 7. short reusable takeaway
+8. interview-ready takeaway when the topic is likely to appear in design interviews or architecture reviews
 
 ### Learning Path
 
@@ -121,6 +127,7 @@ Good shape:
 5. best approach or strong default
 6. main tradeoff, failure mode, or migration implication
 7. practical rule
+8. interview-ready takeaway when the reader may need to defend the decision out loud
 
 ### Cheatsheet Or Refresh Doc
 
@@ -179,6 +186,7 @@ Before finalizing, check:
 - is the best approach or strong default visible when one exists?
 - is the main tradeoff, failure mode, or limitation visible?
 - would the material help reject a bad mental model or weak decision, not only describe a term?
+- if the topic is interview-relevant, is there a short reusable answer the reader could say out loud?
 
 ## References
 
