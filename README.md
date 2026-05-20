@@ -1,88 +1,97 @@
 # Personal Codex Skills
 
-This folder is the source of truth for local Codex skills that should survive
-device changes, reinstalls, and cleanup in `~/.codex/skills`.
+This repository is the source of truth for local Codex skills that should
+survive device changes, reinstalls, and cleanup in `~/.codex/skills`.
 
-These skills are meant for the Codex desktop/CLI skill system, where each skill
-is a folder with a `SKILL.md` file and optional metadata, references, scripts,
-or assets.
+Each skill is a small, focused folder for the Codex desktop and CLI skill
+system. The real contract lives in `SKILL.md`; references, metadata, scripts,
+and assets exist only when they add clear value.
 
-## Status
+## What This Repository Is For
 
-This repository is public, but read-only by default.
+The point is not to collect dozens of vague prompts.
 
-If you want to adapt or extend a skill, fork the repo and use it as a base for
-your own local setup.
+The point is to keep a small set of reusable skills that improve repeatable
+engineering and writing workflows:
 
-If you want to contribute directly to this repository, ask for access first.
+- clearer technical communication
+- stronger documentation and learning material
+- safer AppSec-oriented code review
+- better positioning work for CV and career documents
 
-Commercial use is not allowed under the default license split.
+## Current Skills
 
-Current skills:
+- `signal-first`: concise, direct, professional engineering communication
+- `cv-positioning-copy`: CV, LinkedIn, cover-letter, and profile wording that
+  stays credible
+- `learning-material-author`: plain-English learning and technical
+  documentation writing
+- `appsec-review`: evidence-first AppSec review for backend, web, and mobile
+  code
 
-- `signal-first`
-- `cv-positioning-copy`
-- `learning-material-author`
+## Repository Structure
 
-## Structure
+Each skill should keep its durable files close to the actual workflow:
 
-Each skill folder should contain the files Codex actually uses:
+- `SKILL.md`: trigger metadata and working instructions
+- `agents/openai.yaml`: optional UI metadata
+- `references/`: longer guidance that should be loaded only when needed
+- `scripts/` or `assets/`: only when deterministic helpers or reusable output
+  files are genuinely useful
 
-- `SKILL.md`
-- `agents/openai.yaml` when UI metadata is needed
-- `references/` for longer rules or guidance
-- `scripts/` or `assets/` only when truly needed
+Some skills also keep a short local `README.md` when a human-readable summary
+or maintenance note is worth having in the repo.
 
-Each skill may also include a short local `README.md` explaining:
+## Install And Sync
 
-- what the skill is for
-- what its source-of-truth role is
-- any installation or maintenance notes
-
-## Install / Sync
-
-By default, the install script copies skills into:
+By default, `install.sh` copies skills into:
 
 - `$CODEX_HOME/skills` when `CODEX_HOME` is set
 - `~/.codex/skills` otherwise
 
-For the always-on communication and writing workflows, `install.sh` also syncs:
+`signal-first` and `cv-positioning-copy` are also synced into
+`~/.codex/skills/.system` because they are meant to be globally discoverable in
+future Codex sessions.
 
-- `signal-first`
-- `cv-positioning-copy`
-
-into `~/.codex/skills/.system` so future Codex sessions can discover them as
-global system-level skills.
-
-To install or refresh all skills into that target location:
+Install or refresh every skill:
 
 ```bash
 ./install.sh
 ```
 
-To install only one skill:
+Install or refresh one skill:
 
 ```bash
 ./install.sh signal-first
 ./install.sh cv-positioning-copy
 ./install.sh learning-material-author
+./install.sh appsec-review
 ```
 
-## Use
-
-Once installed, the skills can be invoked from Codex by name, for example:
+## Example Use
 
 ```text
 Use $signal-first to keep this review concise and high-signal.
-Use $cv-positioning-copy to refine this CV from the candidate profile.
 Use $learning-material-author to rewrite this note into clearer study material with less jargon.
+Use $appsec-review to review this backend and mobile flow for OWASP-aligned risks grounded in repository evidence.
 ```
 
-## Rule
+## Repository Rule
 
 Edit skills here first.
 
 Treat `~/.codex/skills` as the installed copy, not the canonical copy.
+
+## Public Repository Status
+
+This repository is public, but read-only by default.
+
+If you want to adapt or extend a skill, fork the repo and use it as the base
+for your own local setup.
+
+If you want to contribute directly here, ask for access first.
+
+Commercial use is not allowed under the default license split.
 
 ## Related Documents
 

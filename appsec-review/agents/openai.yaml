@@ -1,0 +1,4 @@
+interface:
+  display_name: "AppSec Review"
+  short_description: "Evidence-first security review for backend, web, and mobile code"
+  default_prompt: "Use $appsec-review to review this codebase for OWASP-aligned AppSec risks, secret exposure, insecure auth, and dependency issues grounded in repository evidence."
