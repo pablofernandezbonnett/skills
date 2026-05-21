@@ -30,7 +30,7 @@ Good pattern:
 1. why this matters
 2. smallest useful mental model
 3. bad mental model vs better mental model
-4. small concrete example
+4. small concrete example, using code when it clarifies the idea best and a word example when it does not
 5. best approach or strong default
 6. main tradeoff, failure mode, or caution
 7. interview-ready takeaway when the topic teaches a reusable decision pattern
@@ -58,6 +58,8 @@ Replace them with concrete meaning:
 - Open from the reader's real need when possible.
 - Explain what confusion, design choice, or failure pattern the topic helps with.
 - Use domain examples that feel close to real backend or architecture work.
+- Prefer a small code example when code makes the concept easier to defend. If
+  code would add noise, use a short word example or mini-scenario instead.
 
 Good example domains:
 
@@ -149,7 +151,7 @@ Before finishing, ask:
 - does the opening explain why this topic matters?
 - is the first useful meaning visible early?
 - is any jargon unexplained or underexplained?
-- does the reader get a concrete example where it helps?
+- does the reader get a concrete example where it helps, with code when useful and a word example when code would be noise?
 - is the best approach or strong default visible when it should be?
 - is the main tradeoff or failure mode visible?
 - is the text concise without becoming telegraphic?

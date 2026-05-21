@@ -73,8 +73,10 @@ Do not optimize for:
    approach` when the reader needs help rejecting bad decisions.
 
 5. Add one small concrete example.
-   Prefer a minimal backend, architecture, reliability, or data-flow example
-   over abstract theory.
+   Prefer a minimal code example when code is the clearest way to show the
+   idea. If code would distract or the topic is more conceptual, use a small
+   word-based scenario instead. In both cases, prefer backend, architecture,
+   reliability, or data-flow examples over abstract theory.
 
 6. State the best approach or strong default when there is one.
    Say what a sensible first choice looks like before diving into edge cases.
@@ -146,6 +148,8 @@ Good shape:
 - Use short sections and flat lists.
 - Explain the idea in one to three lines before deepening it.
 - Use examples that are small enough to scan but real enough to defend.
+- Prefer a small code example when code clarifies the idea fastest. If code is
+  not the right vehicle, use a small word example or mini-scenario instead.
 - Prefer practical domain examples such as checkout, payments, merchants,
   inventory, queues, retries, or data flows when they fit.
 
@@ -182,7 +186,7 @@ Before finalizing, check:
 - can the reader tell why this concept exists?
 - does each key term earn its place?
 - is the smallest useful meaning visible early?
-- is there at least one concrete example where helpful?
+- is there at least one concrete example where helpful, using code when it clarifies the idea and a word example when it does not?
 - is the best approach or strong default visible when one exists?
 - is the main tradeoff, failure mode, or limitation visible?
 - would the material help reject a bad mental model or weak decision, not only describe a term?
