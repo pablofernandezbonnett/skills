@@ -35,6 +35,17 @@ Good pattern:
 6. main tradeoff, failure mode, or caution
 7. interview-ready takeaway when the topic teaches a reusable decision pattern
 
+## Factual Accuracy And Source Discipline
+
+- Do not invent product behavior, API details, vendor capabilities, standard requirements, or market facts.
+- When the topic includes details that can change over time, verify them before writing as fact.
+- Prefer primary or otherwise high-trust sources such as official docs, standards bodies, vendor documentation, or direct repository evidence.
+- If a point is an inference rather than a confirmed fact, say so.
+
+Short rule:
+
+- explain stable concepts from understanding; verify unstable specifics before teaching them
+
 ## Plain Language, Not Empty Language
 
 - Prefer simple wording, but do not simplify until the claim becomes false.
@@ -154,6 +165,7 @@ Before finishing, ask:
 - does the reader get a concrete example where it helps, with code when useful and a word example when code would be noise?
 - is the best approach or strong default visible when it should be?
 - is the main tradeoff or failure mode visible?
+- are factual details grounded in a trustworthy source instead of assumption or invention?
 - is the text concise without becoming telegraphic?
 - would the material help a real person reject a weak mental model and explain a better decision?
 - if the topic is interview-relevant, is there a short reusable answer or defense line?

@@ -18,6 +18,7 @@ Default goal:
 - expose weak reasoning versus stronger reasoning when the topic is about decisions
 - avoid buzzword-only explanations
 - keep the material practical, scannable, and technically defensible
+- keep factual claims grounded in real, non-invented information
 
 This skill is for learning-oriented documentation, not for product marketing,
 API reference generation, or theoretical textbook writing.
@@ -35,6 +36,19 @@ If a term appears, explain quickly:
 
 If the term's name is doing most of the explanatory work, the explanation is not
 finished yet.
+
+## Factual Accuracy
+
+Do not invent facts to make a document feel complete.
+
+If the material names concrete vendor behavior, product capability, standard requirement, market fact, date-sensitive detail, or other claim that could be wrong or out of date:
+
+- verify it against a primary or otherwise high-trust source before stating it as fact
+- prefer official documentation, standards bodies, vendor docs, or direct repository evidence
+- say when you are making an inference instead of presenting it as a confirmed fact
+
+For stable concepts, explain from understanding.
+For unstable or vendor-specific details, verify before you teach.
 
 ## Writing Priorities
 
@@ -189,6 +203,7 @@ Before finalizing, check:
 - is there at least one concrete example where helpful, using code when it clarifies the idea and a word example when it does not?
 - is the best approach or strong default visible when one exists?
 - is the main tradeoff, failure mode, or limitation visible?
+- are concrete factual claims grounded in repository evidence or a primary/current source rather than memory or invention?
 - would the material help reject a bad mental model or weak decision, not only describe a term?
 - if the topic is interview-relevant, is there a short reusable answer the reader could say out loud?
 
