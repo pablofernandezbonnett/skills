@@ -46,6 +46,10 @@ Short rule:
 
 - explain stable concepts from understanding; verify unstable specifics before teaching them
 
+- When official documentation exists, use it as the default source instead of secondary summaries.
+- For libraries, frameworks, SDKs, APIs, CLIs, cloud platforms, or vendor-specific behavior, prefer current official docs.
+- If `context7` is available in the working environment, prefer it to retrieve up-to-date official documentation before writing those materials.
+
 ## Plain Language, Not Empty Language
 
 - Prefer simple wording, but do not simplify until the claim becomes false.

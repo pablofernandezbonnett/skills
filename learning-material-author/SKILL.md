@@ -50,6 +50,8 @@ If the material names concrete vendor behavior, product capability, standard req
 For stable concepts, explain from understanding.
 For unstable or vendor-specific details, verify before you teach.
 
+When official documentation exists, prefer it over secondary summaries. For library, framework, SDK, API, CLI, cloud, or vendor-specific material, use the official docs as the default source of truth. If `context7` is available in the environment, prefer it to fetch current official documentation rather than relying on memory.
+
 ## Writing Priorities
 
 Optimize for:
