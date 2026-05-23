@@ -102,12 +102,12 @@ Do not optimize for:
    what cost it introduces.
 
 8. End with a reusable takeaway when useful.
-   The reader should leave with one short answer they could explain out loud.
+   The reader should leave with one short idea they can remember and reuse.
 
-9. Add an interview-ready takeaway when the material teaches design or pattern
-   choice.
-   If the reader may need to defend the idea in an interview or design review,
-   give them one short, reusable answer shape.
+9. If the material teaches design or pattern choice, it may help to leave one
+   short, reusable explanation shape.
+   This is secondary to learning. Use it only when it helps compress the idea
+   and make the concept easier to explain later.
 
 10. Add a short `Further Reading` section when it improves durable study value.
     Prefer a small set of high-signal links, with official documentation first.
@@ -126,7 +126,7 @@ Good shape:
 5. best approach or strong default
 6. main tradeoff or failure mode
 7. short reusable takeaway
-8. interview-ready takeaway when the topic is likely to appear in design interviews or architecture reviews
+8. optional reusable explanation shape when it genuinely helps the reader restate the idea later
 
 ### Learning Path
 
@@ -149,7 +149,7 @@ Good shape:
 5. best approach or strong default
 6. main tradeoff, failure mode, or migration implication
 7. practical rule
-8. interview-ready takeaway when the reader may need to defend the decision out loud
+8. optional reusable explanation shape when it helps compress the decision clearly
 
 ### Cheatsheet Or Refresh Doc
 
@@ -211,7 +211,7 @@ Before finalizing, check:
 - is the main tradeoff, failure mode, or limitation visible?
 - are concrete factual claims grounded in repository evidence or a primary/current source rather than memory or invention?
 - would the material help reject a bad mental model or weak decision, not only describe a term?
-- if the topic is interview-relevant, is there a short reusable answer the reader could say out loud?
+- if the note includes a short reusable explanation, does it help learning rather than shifting the doc into interview-prep mode?
 
 ## References
 

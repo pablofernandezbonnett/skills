@@ -33,7 +33,7 @@ Good pattern:
 4. small concrete example, using code when it clarifies the idea best and a word example when it does not
 5. best approach or strong default
 6. main tradeoff, failure mode, or caution
-7. interview-ready takeaway when the topic teaches a reusable decision pattern
+7. optional reusable explanation shape when it helps the reader restate the idea clearly later
 
 ## Factual Accuracy And Source Discipline
 
@@ -141,7 +141,7 @@ If a topic note tries to do all of them equally, it often becomes too broad.
 - Explain what fails under retries, partial failure, or migration.
 - Show the operating or migration consequence, not only the target-state design.
 - Prefer a strong default before edge-case branching when the reader needs decision help.
-- When the topic is likely to appear in interviews or design reviews, end with a short reusable answer the reader could say out loud.
+- A short reusable explanation can help, but only when it supports learning and compression instead of turning the note into interview prep.
 
 ## Refresh And Cheatsheet Bias
 
@@ -180,4 +180,4 @@ Before finishing, ask:
 - are factual details grounded in a trustworthy source instead of assumption or invention?
 - is the text concise without becoming telegraphic?
 - would the material help a real person reject a weak mental model and explain a better decision?
-- if the topic is interview-relevant, is there a short reusable answer or defense line?
+- if the note includes a short reusable explanation, is it there to support learning rather than to optimize for performance in an interview?
