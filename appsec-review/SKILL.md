@@ -35,13 +35,16 @@ not to recite generic best practices or pretend a full pentest happened.
    - external calls, uploads, files, and path handling
    - logging, error handling, and observability leakage
    - session, token, browser, or mobile storage boundaries
-5. Run focused scanners when the files or change justify it:
+5. Run focused scanners when the files or change justify it and the tools are
+   available:
    - `gitleaks git --staged --redact --no-banner` for staged or diff-focused
      secret exposure checks
    - `trufflehog filesystem --no-verification --fail .` when working-tree files,
      fixtures, dumps, or generated artifacts may contain credentials
    - `osv-scanner scan source -r .` or targeted lockfile scans when dependency
      vulnerability review is in scope and supported manifests exist
+   If a scanner is not installed, say so and continue with repository-evidence
+   review instead of silently skipping the step.
 6. Report findings with evidence, impact, and a concrete fix path.
 
 ## Stack Rules

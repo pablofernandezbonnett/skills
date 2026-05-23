@@ -18,7 +18,9 @@ Default goal:
 ## Workflow
 
 1. Start from the source of truth.
-   In this repo, that is usually `JobHunting/CANDIDATE_PROFILE.yaml`.
+   In this repo, that is usually `JobHunting/CANDIDATE_PROFILE.yaml`. In other
+   repos or local setups, first identify the equivalent canonical profile or
+   fact base before rewriting anything.
 
 2. Confirm what kind of artifact you are editing.
    Common cases:

@@ -49,6 +49,14 @@ By default, `install.sh` copies skills into:
 - `$CODEX_HOME/skills` when `CODEX_HOME` is set
 - `~/.codex/skills` otherwise
 
+Prerequisites:
+
+- `zsh`
+- `rsync`
+
+The installer is copy-only. It does not build, fetch, or register anything
+remotely. It syncs repo folders that contain a `SKILL.md`.
+
 `signal-first` and `cv-positioning-copy` are also synced into
 `~/.codex/skills/.system` because they are meant to be globally discoverable in
 future Codex sessions.
@@ -66,6 +74,18 @@ Install or refresh one skill:
 ./install.sh cv-positioning-copy
 ./install.sh learning-material-author
 ./install.sh appsec-review
+```
+
+List installable skills:
+
+```bash
+./install.sh --list
+```
+
+Show installer usage:
+
+```bash
+./install.sh --help
 ```
 
 ## Example Use

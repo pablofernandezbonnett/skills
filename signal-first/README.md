@@ -17,6 +17,7 @@ Use this skill when you want Codex responses to be:
 - direct
 - professional
 - technically precise
+- persistently high-signal for the rest of the thread unless relaxed on purpose
 
 Main files:
 
@@ -29,6 +30,9 @@ This folder is the source of truth. Install or refresh it into
 ```bash
 ./install.sh signal-first
 ```
+
+This installer also syncs `signal-first` into `~/.codex/skills/.system` so it
+remains globally discoverable in future sessions.
 
 Example invocation:
 

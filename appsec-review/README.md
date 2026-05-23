@@ -76,6 +76,10 @@ Install or refresh this skill from the repository root:
 ./install.sh appsec-review
 ```
 
+This installs the skill definition itself. Scanner CLIs such as `gitleaks`,
+`trufflehog`, and `osv-scanner` remain optional runtime tools for deeper review
+when they are available in the environment.
+
 ## Example Invocation
 
 ```text
