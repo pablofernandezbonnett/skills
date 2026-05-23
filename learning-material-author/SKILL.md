@@ -109,6 +109,10 @@ Do not optimize for:
    If the reader may need to defend the idea in an interview or design review,
    give them one short, reusable answer shape.
 
+10. Add a short `Further Reading` section when it improves durable study value.
+    Prefer a small set of high-signal links, with official documentation first.
+    Do not turn the doc into a link dump.
+
 ## Shape By Document Type
 
 ### Topic Note
