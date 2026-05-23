@@ -149,6 +149,14 @@ If a topic note tries to do all of them equally, it often becomes too broad.
 - Compress only after the meaning is already clear.
 - A good one-line summary should still survive a basic follow-up question.
 
+## Further Reading
+
+- Add a short `Further Reading` section when it genuinely helps the reader go deeper or verify vendor-specific details later.
+- Prefer official docs, standards, or other high-trust primary sources first.
+- Keep the list short and intentional, usually `3-6` links.
+- Each link should have a reason to exist, not just topic adjacency.
+- Do not add a reading list if the links would mostly repeat what the note already says.
+
 ## Duplicate Control
 
 - Fewer docs is usually better when two docs compete for the same job.
