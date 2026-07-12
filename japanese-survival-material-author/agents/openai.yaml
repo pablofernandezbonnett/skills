@@ -1,0 +1,4 @@
+interface:
+  display_name: "Japanese Survival Materials"
+  short_description: "Spanish-first A1 Japanese study notes"
+  default_prompt: "Use $japanese-survival-material-author to create or revise Japanese survival-study notes for Spanish speakers."

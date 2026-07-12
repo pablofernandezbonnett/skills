@@ -26,6 +26,8 @@ engineering and writing workflows:
   stays credible
 - `learning-material-author`: plain-English learning and technical
   documentation writing
+- `japanese-survival-material-author`: Spanish-first A1 Japanese survival
+  material with kana, romaji, and question-and-answer practice
 - `appsec-review`: evidence-first AppSec review for backend, web, and mobile
   code
 
@@ -73,6 +75,7 @@ Install or refresh one skill:
 ./install.sh signal-first
 ./install.sh cv-positioning-copy
 ./install.sh learning-material-author
+./install.sh japanese-survival-material-author
 ./install.sh appsec-review
 ```
 
@@ -93,6 +96,7 @@ Show installer usage:
 ```text
 Use $signal-first to keep this review concise and high-signal.
 Use $learning-material-author to rewrite this note into clearer study material with less jargon.
+Use $japanese-survival-material-author to create Japanese survival-study notes for Spanish speakers.
 Use $appsec-review to review this backend and mobile flow for OWASP-aligned risks grounded in repository evidence.
 ```
 

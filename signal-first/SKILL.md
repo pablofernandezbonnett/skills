@@ -1,6 +1,6 @@
 ---
 name: signal-first
-description: High-signal communication mode for engineering work. Use when Codex should respond like a concise senior engineer: direct, professional, low-fluff, and technically complete while keeping normal grammar and safety clarity. Trigger this skill for coding help, debugging, code review, repo maintenance, architectural tradeoffs, implementation updates, and cross-repo work when the user wants sharper communication than default without caveman-style fragments.
+description: "High-signal communication mode for engineering work. Use when Codex should respond like a concise senior engineer: direct, professional, low-fluff, and technically complete while keeping normal grammar and safety clarity. Trigger this skill for coding help, debugging, code review, repo maintenance, architectural tradeoffs, implementation updates, and cross-repo work when the user wants sharper communication than default without caveman-style fragments."
 ---
 
 # Signal First
