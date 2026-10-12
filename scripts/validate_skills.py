@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
-"""Check skill metadata, local links, and the installer in an isolated home."""
+"""Check skill metadata and local Markdown links."""
 
 from __future__ import annotations
 
-import os
 from pathlib import Path
 import re
-import subprocess
-import tempfile
 
 
 ROOT = Path(__file__).resolve().parent.parent
-INSTALLER = ROOT / "install.sh"
 LINK = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 
 
@@ -32,67 +28,23 @@ def check_skills() -> list[Path]:
             f"Missing description: {skill.name}"
         )
 
-        for markdown in skill.rglob("*.md"):
-            for match in LINK.finditer(markdown.read_text(encoding="utf-8")):
-                target = match.group(1).split("#", 1)[0]
-                if not target or "://" in target or target.startswith("mailto:"):
-                    continue
-                assert (markdown.parent / target).exists(), (
-                    f"Broken link in {markdown.relative_to(ROOT)}: {target}"
-                )
-
     return skills
 
 
-def check_installer(skills: list[Path]) -> None:
-    with tempfile.TemporaryDirectory() as temporary:
-        codex_home = Path(temporary) / "codex"
-        environment = {**os.environ, "CODEX_HOME": str(codex_home)}
-
-        def run(*arguments: str, succeeds: bool = True) -> subprocess.CompletedProcess[str]:
-            result = subprocess.run(
-                [str(INSTALLER), *arguments],
-                cwd=ROOT,
-                env=environment,
-                text=True,
-                capture_output=True,
-                check=False,
+def check_links() -> None:
+    for markdown in ROOT.rglob("*.md"):
+        if ".git" in markdown.parts:
+            continue
+        for match in LINK.finditer(markdown.read_text(encoding="utf-8")):
+            target = match.group(1).split("#", 1)[0]
+            if not target or "://" in target or target.startswith("mailto:"):
+                continue
+            assert (markdown.parent / target).exists(), (
+                f"Broken link in {markdown.relative_to(ROOT)}: {target}"
             )
-            assert (result.returncode == 0) == succeeds, result.stdout + result.stderr
-            return result
-
-        assert len(run("--list").stdout.splitlines()) == len(skills)
-        run("--help")
-        run("--dry-run", "--system", "signal-first")
-        assert not codex_home.exists(), "Read-only installer commands wrote files"
-
-        run("missing-skill", succeeds=False)
-        run("../signal-first", succeeds=False)
-        assert not codex_home.exists(), "Invalid skill created a target directory"
-
-        run()
-        for skill in skills:
-            assert (codex_home / "skills" / skill.name / "SKILL.md").read_bytes() == (
-                skill / "SKILL.md"
-            ).read_bytes()
-        assert not (codex_home / "skills" / ".system").exists(), (
-            "Default install wrote to .system"
-        )
-
-        sentinel = codex_home / "skills" / "signal-first" / "local-note.txt"
-        sentinel.write_text("keep me", encoding="utf-8")
-        run("signal-first")
-        assert sentinel.read_text(encoding="utf-8") == "keep me", (
-            "Refresh removed an unrelated local file"
-        )
-
-        run("--system", "signal-first")
-        assert (
-            codex_home / "skills" / ".system" / "signal-first" / "SKILL.md"
-        ).read_bytes() == (ROOT / "signal-first" / "SKILL.md").read_bytes()
 
 
 if __name__ == "__main__":
     found = check_skills()
-    check_installer(found)
-    print(f"Validated {len(found)} skills and installer behavior")
+    check_links()
+    print(f"Validated {len(found)} skills and local Markdown links")

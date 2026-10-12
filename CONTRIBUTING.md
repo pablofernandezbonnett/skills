@@ -7,7 +7,7 @@ This repository is public, but it is kept read-only by default.
 If you want to reuse or extend the skills for your own local Codex setup:
 
 - fork the repository
-- customize the skills, references, and install flow around your own workflow
+- customize the skills and references around your own workflow
 
 That is the expected path for most people.
 

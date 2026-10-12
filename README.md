@@ -1,7 +1,7 @@
 # Codex Skills
 
-This repository is the source of truth for these skills. Keep it under version
-control and connect its skill folders to Codex on each device.
+This repository is the source of truth for these skills. Install individual
+skills from GitHub with Codex's built-in `$skill-installer`.
 
 Each skill is a small, focused folder for the Codex desktop and CLI skill
 system. The real contract lives in `SKILL.md`; references, metadata, scripts,
@@ -44,13 +44,40 @@ Each skill should keep its durable files close to the actual workflow:
 Some skills also keep a short local `README.md` when a human-readable summary
 or maintenance note is worth having in the repo.
 
-## Local Use
+## Install with Codex
 
-OpenAI documents `$HOME/.agents/skills` as the user-level skill location and
-supports symlinked skill folders. For a fresh setup, run the following from
-the repository root to work directly from this checkout without copying after
-every edit. If you previously used the copy installer, reconcile those copies
-first so the same skills do not appear in multiple locations.
+Ask Codex to use its built-in installer. You can install one skill or all five;
+no checkout or repository script is required. For example:
+
+```text
+Use $skill-installer to install appsec-review from https://github.com/pablofernandezbonnett/skills/tree/main/appsec-review.
+```
+
+To install the complete set:
+
+```text
+Use $skill-installer to install these folders from pablofernandezbonnett/skills on main: appsec-review, cv-positioning-copy, japanese-survival-material-author, learning-material-author, and signal-first.
+```
+
+The installer places each skill under `$CODEX_HOME/skills` (normally
+`~/.codex/skills`). It refuses to replace an existing skill folder, so review
+any existing installation or local edits before replacing it. Installed copies
+do not update automatically. To update one, review the new version, move the
+old installed folder aside, and install again. Also check for an existing copy
+or symlink under `$HOME/.agents/skills`: the installer does not check that
+location, and duplicate skill names can appear in Codex. Review a skill's
+`SKILL.md` and any scripts before installing it, as you would with other
+third-party code.
+
+Codex normally detects newly installed skills. If one does not appear,
+restart the app. See [OpenAI's skill guide](https://learn.chatgpt.com/docs/build-skills)
+and the bundled `$skill-installer` for current behavior.
+
+## Develop from a local checkout
+
+OpenAI also documents `$HOME/.agents/skills` as a user-level skill location and
+supports symlinked skill folders. If you are editing these skills, clone the
+repository and run this from its root so Codex reads your working files:
 
 ```bash
 mkdir -p "$HOME/.agents/skills"
@@ -61,70 +88,9 @@ done
 ```
 
 The `ln` command refuses to replace a name that already exists. Inspect that
-entry before replacing it. Keep each skill installed in one discovery location
-to avoid duplicate names in Codex. Codex normally detects skill changes; if a
-skill does not appear, restart the app.
-
-See [OpenAI's skill guide](https://learn.chatgpt.com/docs/build-skills) for
-current discovery locations and invocation behavior.
-
-## Compatibility Copy Installer
-
-`install.sh` supports existing setups that copy skills into:
-
-- `$CODEX_HOME/skills` when `CODEX_HOME` is set
-- `~/.codex/skills` otherwise
-
-Prerequisites:
-
-- `zsh`
-- `rsync`
-
-The installer copies repo folders that contain a `SKILL.md`. It does not build,
-fetch, or register anything remotely. It overwrites destination files with the
-same names and keeps other files already in an installed skill folder. Check
-your local edits before refreshing a skill.
-
-With its default settings, this script does not install into
-`$HOME/.agents/skills`. Its normal run writes only to the copy destination
-above. `--system` also copies `signal-first` and `cv-positioning-copy` into
-`.system` for setups that already use that location; it can cause those skills
-to appear twice.
-
-Install or refresh every skill:
-
-```bash
-./install.sh
-```
-
-Install or refresh one skill:
-
-```bash
-./install.sh signal-first
-./install.sh cv-positioning-copy
-./install.sh learning-material-author
-./install.sh japanese-survival-material-author
-./install.sh appsec-review
-```
-
-Preview destinations without writing files:
-
-```bash
-./install.sh --dry-run
-./install.sh --dry-run --system signal-first
-```
-
-List installable skills:
-
-```bash
-./install.sh --list
-```
-
-Show installer usage:
-
-```bash
-./install.sh --help
-```
+entry first, and keep each skill in one discovery location to avoid duplicate
+names in Codex. This checkout workflow is for authors who want edits to take
+effect without reinstalling; the GitHub installer is simpler for users.
 
 ## Example Use
 
@@ -138,21 +104,21 @@ Use $appsec-review to review this backend and mobile flow for OWASP-aligned risk
 ## Validation
 
 Run `python3 scripts/validate_skills.py` to check required frontmatter fields
-and local Markdown links, then exercise the installer in a temporary Codex home.
-The same check runs in GitHub Actions on pushes and pull requests.
+and local Markdown links. The same check runs in GitHub Actions on pushes and
+pull requests.
 
 ## Repository Rule
 
 Edit skills here first.
 
-Treat copied skills under `~/.codex/skills` as installed copies, not the
-canonical source. Symlinks into this checkout stay current with the repo.
+Treat installed skills under `~/.codex/skills` as copies, not the canonical
+source. Symlinks into this checkout stay current with the repo.
 
 ## Public Distribution
 
-These folders can be inspected or installed individually. For a reusable
-bundle of several skills, [OpenAI recommends a plugin](https://developers.openai.com/plugins/build/plugins).
-This repository does not yet include a plugin manifest or marketplace entry.
+These folders can be inspected and installed individually with
+`$skill-installer`. This repository currently distributes standalone skills,
+without a plugin manifest or marketplace entry.
 
 ## Public Repository Status
 
