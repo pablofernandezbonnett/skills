@@ -1,4 +1,4 @@
-# Personal Codex Skills
+# Codex Skills
 
 This repository is the source of truth for local Codex skills that should
 survive device changes, reinstalls, and cleanup in `~/.codex/skills`.
@@ -56,12 +56,14 @@ Prerequisites:
 - `zsh`
 - `rsync`
 
-The installer is copy-only. It does not build, fetch, or register anything
-remotely. It syncs repo folders that contain a `SKILL.md`.
+The installer copies repo folders that contain a `SKILL.md`. It does not build,
+fetch, or register anything remotely. It overwrites destination files with the
+same names and keeps other files already in an installed skill folder. Check
+your local edits before refreshing a skill.
 
-`signal-first` and `cv-positioning-copy` are also synced into
-`~/.codex/skills/.system` because they are meant to be globally discoverable in
-future Codex sessions.
+The normal install writes only to the user skills directory. `--system` also
+copies `signal-first` and `cv-positioning-copy` into `.system` for setups that
+already use that location; it can cause those skills to appear twice.
 
 Install or refresh every skill:
 
@@ -77,6 +79,13 @@ Install or refresh one skill:
 ./install.sh learning-material-author
 ./install.sh japanese-survival-material-author
 ./install.sh appsec-review
+```
+
+Preview destinations without writing files:
+
+```bash
+./install.sh --dry-run
+./install.sh --dry-run --system signal-first
 ```
 
 List installable skills:
@@ -100,6 +109,12 @@ Use $japanese-survival-material-author to create Japanese survival-study notes f
 Use $appsec-review to review this backend and mobile flow for OWASP-aligned risks grounded in repository evidence.
 ```
 
+## Validation
+
+Run `python3 scripts/validate_skills.py` to check required frontmatter fields
+and local Markdown links, then exercise the installer in a temporary Codex home.
+The same check runs in GitHub Actions on pushes and pull requests.
+
 ## Repository Rule
 
 Edit skills here first.
@@ -115,7 +130,11 @@ for your own local setup.
 
 If you want to contribute directly here, ask for access first.
 
-Commercial use is not allowed under the default license split.
+The repository uses non-commercial terms. Under the current [LICENSE](./LICENSE),
+`SKILL.md`, scripts, metadata, and embedded code examples fall under PolyForm
+Noncommercial 1.0.0; prose documentation, references, and non-code assets fall
+under CC BY-NC-SA 4.0. Check the license text for the terms that apply to your
+planned use. Commercial use requires separate permission.
 
 ## Related Documents
 

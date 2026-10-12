@@ -32,8 +32,9 @@ This folder is the source of truth. Install or refresh it into
 ./install.sh signal-first
 ```
 
-This installer also syncs `signal-first` into `~/.codex/skills/.system` so it
-remains globally discoverable in future sessions.
+The normal installer writes only to the user skills directory. The optional
+`--system` flag also copies this skill into `.system` for existing setups that
+use that location.
 
 Example invocation:
 

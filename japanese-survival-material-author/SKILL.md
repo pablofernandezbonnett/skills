@@ -14,8 +14,8 @@ ordinary situations in Japan.
 - Write in Spanish unless the user asks for another teaching language.
 - Prioritize daily survival: introductions, class, time and dates, shopping,
   food, transport, city navigation, and travel.
-- Keep the material original. It may align with a course or *Marugoto*, but do
-  not reproduce textbook passages, exercises, or their structure closely.
+- Keep the material original. It may complement a course, but do not reproduce
+  textbook passages, exercises, or their structure closely.
 - Do not turn a focused note into a complete grammar course. Add only the
   smallest rule needed to use the phrase correctly.
 - Treat beginner kanji as recognition first, not as handwriting homework.
@@ -85,14 +85,15 @@ sequence) are not interchangeable.
 
 ## Workflow
 
-1. Inspect the existing Japanese README and nearby notes before adding content.
-   Preserve their route, terminology, romaji convention, and internal links.
+1. If the project has existing Japanese notes or a learning index, inspect
+   them before adding content. Preserve their route, terminology, romaji
+   convention, and internal links where relevant.
 2. Start from the real situation or current course topic. Select the smallest
    useful set of questions, answers, words, and cautions.
 3. Write short sections with clear headings. Prefer a dialogue, a compact table,
    and one practical rule over an abstract grammar explanation.
-4. Link to the canonical note instead of duplicating a concept. Update the
-   Japanese README when the learning route or future-topic list changes.
+4. Link to an existing canonical note instead of duplicating a concept. Update
+   a learning index only when one exists and the route changes.
 5. Check factual accuracy, especially readings, counters, particles, and
    polite request forms. When uncertain, verify before teaching it as a rule.
 6. Audit new Japanese phrases and vocabulary for a nearby romaji reading and
@@ -110,8 +111,8 @@ sequence) are not interchangeable.
 - Keep medical and allergy language cautious: encourage written confirmation
   and professional or emergency help when the situation exceeds a simple
   survival phrase.
-- Keep a visible, validated list of next topics rather than pre-writing a full
-  curriculum.
+- If the project tracks future topics, keep that list short and validated
+  rather than pre-writing a full curriculum.
 
 ## Avoid
 

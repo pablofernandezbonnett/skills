@@ -5,7 +5,7 @@ letters, and candidate-summary wording.
 
 Purpose:
 
-- keep all employability artifacts aligned with the candidate profile
+- keep all employability artifacts aligned with verified candidate evidence
 - preserve `credibility > optimization`
 - improve punch without overselling
 - keep wording natural and interview-defendable
@@ -35,12 +35,12 @@ This folder is the source of truth. Install or refresh it into
 ./install.sh cv-positioning-copy
 ```
 
-This installer also syncs `cv-positioning-copy` into
-`~/.codex/skills/.system` so it remains globally discoverable in future
-sessions.
+The normal installer writes only to the user skills directory. The optional
+`--system` flag also copies this skill into `.system` for existing setups that
+use that location.
 
 Example invocation:
 
 ```text
-Use $cv-positioning-copy to tighten this LinkedIn About section without overselling cloud or leadership.
+Use $cv-positioning-copy to tighten this LinkedIn About section without overstating experience or responsibility.
 ```

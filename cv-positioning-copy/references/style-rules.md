@@ -10,7 +10,8 @@
 ## Truth Boundaries
 
 - Do not present exposure as ownership.
-- Do not present collaboration with cloud, infrastructure, or DevOps teams as cloud or DevOps strength.
+- Do not present collaboration with another specialty as ownership or deep
+  expertise in that specialty.
 - Do not present technical influence as formal leadership unless the role really had that scope.
 - Make honest gaps explicit in the source-of-truth material so they do not leak into CVs or cover letters as false strengths.
 
@@ -50,7 +51,7 @@
 
 - Distinguish technology/platform from project/product.
 - Keep naming precise.
-- Example: `SAP Commerce / Hybris` is the platform or environment. `SAP Store` is the concrete product/project.
+- Name the actual technology and product only when the evidence supports them.
 
 ## Summary and About Rules
 
@@ -85,14 +86,12 @@
 - Do not add ATS keywords that the candidate cannot defend.
 - Projects do not automatically belong in the skills section if they fit better in experience.
 
-## Japan Market Fit
+## Target Market Fit
 
-- Help the reader answer quickly:
-  - Is the candidate in Japan?
-  - Do they need sponsorship?
-  - What kind of engineer are they?
-  - Is the experience real and usable?
-  - Where can this person fit?
+- Help the reader answer quickly what the candidate does, where their
+  experience fits, and which location, language, or work-authorization facts
+  matter for the target role.
+- Include those practical facts only when verified and relevant.
 - Prefer sober, clear, stable positioning over hype.
 - The candidate should feel interviewable and placeable, not inflated.
 
@@ -101,16 +100,16 @@
 - Cut redundancy before cutting signal.
 - Compress older experience before weakening strong recent roles.
 - Keep visible if relevant:
-  - current location / sponsorship status
+  - relevant location or work-authorization facts
   - core identity
   - strongest domain
-  - strongest product or commerce evidence
-  - integrations / checkout / payment-related work when real
+  - strongest evidence from relevant products or domains
+  - relevant integration or delivery work when real
 
 ## Final Check
 
 Before finishing, check:
 - Does the wording still sound like the same person across documents?
-- Does anything sound stronger than the candidate profile supports?
+- Does anything sound stronger than the verified evidence supports?
 - Has any key distinction been blurred, such as platform vs project or exposure vs ownership?
 - Is the document trying to impress more than it is trying to be defensible?
