@@ -1,7 +1,7 @@
 # Codex Skills
 
-This repository is the source of truth for local Codex skills that should
-survive device changes, reinstalls, and cleanup in `~/.codex/skills`.
+This repository is the source of truth for these skills. Keep it under version
+control and connect its skill folders to Codex on each device.
 
 Each skill is a small, focused folder for the Codex desktop and CLI skill
 system. The real contract lives in `SKILL.md`; references, metadata, scripts,
@@ -44,9 +44,33 @@ Each skill should keep its durable files close to the actual workflow:
 Some skills also keep a short local `README.md` when a human-readable summary
 or maintenance note is worth having in the repo.
 
-## Install And Sync
+## Local Use
 
-By default, `install.sh` copies skills into:
+OpenAI documents `$HOME/.agents/skills` as the user-level skill location and
+supports symlinked skill folders. For a fresh setup, run the following from
+the repository root to work directly from this checkout without copying after
+every edit. If you previously used the copy installer, reconcile those copies
+first so the same skills do not appear in multiple locations.
+
+```bash
+mkdir -p "$HOME/.agents/skills"
+for manifest in */SKILL.md; do
+  skill="${manifest%%/*}"
+  ln -s "$PWD/$skill" "$HOME/.agents/skills/$skill"
+done
+```
+
+The `ln` command refuses to replace a name that already exists. Inspect that
+entry before replacing it. Keep each skill installed in one discovery location
+to avoid duplicate names in Codex. Codex normally detects skill changes; if a
+skill does not appear, restart the app.
+
+See [OpenAI's skill guide](https://learn.chatgpt.com/docs/build-skills) for
+current discovery locations and invocation behavior.
+
+## Compatibility Copy Installer
+
+`install.sh` supports existing setups that copy skills into:
 
 - `$CODEX_HOME/skills` when `CODEX_HOME` is set
 - `~/.codex/skills` otherwise
@@ -61,9 +85,11 @@ fetch, or register anything remotely. It overwrites destination files with the
 same names and keeps other files already in an installed skill folder. Check
 your local edits before refreshing a skill.
 
-The normal install writes only to the user skills directory. `--system` also
-copies `signal-first` and `cv-positioning-copy` into `.system` for setups that
-already use that location; it can cause those skills to appear twice.
+With its default settings, this script does not install into
+`$HOME/.agents/skills`. Its normal run writes only to the copy destination
+above. `--system` also copies `signal-first` and `cv-positioning-copy` into
+`.system` for setups that already use that location; it can cause those skills
+to appear twice.
 
 Install or refresh every skill:
 
@@ -119,7 +145,14 @@ The same check runs in GitHub Actions on pushes and pull requests.
 
 Edit skills here first.
 
-Treat `~/.codex/skills` as the installed copy, not the canonical copy.
+Treat copied skills under `~/.codex/skills` as installed copies, not the
+canonical source. Symlinks into this checkout stay current with the repo.
+
+## Public Distribution
+
+These folders can be inspected or installed individually. For a reusable
+bundle of several skills, [OpenAI recommends a plugin](https://developers.openai.com/plugins/build/plugins).
+This repository does not yet include a plugin manifest or marketplace entry.
 
 ## Public Repository Status
 

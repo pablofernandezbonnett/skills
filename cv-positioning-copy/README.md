@@ -28,16 +28,16 @@ Main files:
 - `agents/openai.yaml`
 - `references/style-rules.md`
 
-This folder is the source of truth. Install or refresh it into
-`~/.codex/skills` from the repo root with:
+This folder is the source of truth. See the [repository's local-use
+instructions](../README.md#local-use). For an existing setup that uses the
+compatibility copy installer, run this from the repository root:
 
 ```bash
 ./install.sh cv-positioning-copy
 ```
 
-The normal installer writes only to the user skills directory. The optional
-`--system` flag also copies this skill into `.system` for existing setups that
-use that location.
+The optional `--system` flag also copies this skill into `.system` for existing
+setups that use that location; see the [installer details](../README.md#compatibility-copy-installer).
 
 Example invocation:
 

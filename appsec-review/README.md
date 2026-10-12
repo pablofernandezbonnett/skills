@@ -68,9 +68,11 @@ manager and lockfile.
 - `references/frontend-and-mobile-checks.md`
 - `references/secrets-and-dependencies.md`
 
-## Install
+## Local Use
 
-Install or refresh this skill from the repository root:
+See the [repository's local-use instructions](../README.md#local-use). For an
+existing setup that uses the compatibility copy installer, run this from the
+repository root:
 
 ```bash
 ./install.sh appsec-review

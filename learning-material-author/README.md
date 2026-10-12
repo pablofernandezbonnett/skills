@@ -32,8 +32,9 @@ Main files:
 - `agents/openai.yaml`
 - `references/style-rules.md`
 
-This folder is the source of truth. Install or refresh it into
-`~/.codex/skills` from the repo root with:
+This folder is the source of truth. See the [repository's local-use
+instructions](../README.md#local-use). For an existing setup that uses the
+compatibility copy installer, run this from the repository root:
 
 ```bash
 ./install.sh learning-material-author
