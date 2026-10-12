@@ -9,9 +9,12 @@ Purpose:
 - explain technical ideas in plain language without dumbing them down
 - avoid jargon without purpose or explanation
 - keep learning materials concise, scannable, and reusable
-- favor practical mental models, small code or word examples, visible tradeoffs, clear weak-vs-strong reasoning, and short reusable explanations when they genuinely help the reader remember the idea
+- favor practical mental models, small code or word examples, and visible
+  tradeoffs when they help the reader use the idea
 
-Use this skill when creating or revising material with a clear teaching shape, especially when the doc should follow a pattern such as `why this matters -> smallest mental model -> weak vs better -> small example -> strong default -> tradeoff`, using a small code example when code helps most and a small word example when it does not. If the final result also makes the idea easier to explain later, that is a bonus, not the primary goal.
+Use this skill when creating or revising material with a clear teaching goal.
+Choose an explanation shape that fits the topic and reader; use a contrast
+between weak and stronger reasoning when it clarifies a decision.
 
 Use this skill when creating or revising:
 

@@ -25,7 +25,7 @@ Short rule:
 - Do not begin with taxonomy when one plain-language explanation would open the topic faster.
 - The first few lines should make the reader feel oriented, not tested.
 
-Good pattern:
+One useful pattern when the topic teaches a decision:
 
 1. why this matters
 2. smallest useful mental model
@@ -89,7 +89,7 @@ Good example domains:
 
 ## Useful Contrast Patterns
 
-These usually improve learning docs:
+These can improve learning docs when they clarify a choice:
 
 - bad mental model vs better mental model
 - weak approach vs better approach
@@ -97,9 +97,7 @@ These usually improve learning docs:
 - symptom vs cause
 - target state vs migration reality
 
-Use them when they clarify a decision boundary. In architecture, reliability,
-and solution-design material, these are often the best default shape. Do not
-add them mechanically when a simpler explanation is already enough.
+Do not add them mechanically when a simpler explanation is enough.
 
 ## Learning Paths
 
@@ -135,7 +133,7 @@ If a topic note tries to do all of them equally, it often becomes too broad.
 
 - Name why the topic matters before taxonomy or pattern names.
 - Make the smallest mental model visible early.
-- Use `bad mental model vs better mental model` or `weak approach vs better approach` when the topic teaches judgment.
+- Use a weak-versus-strong contrast when it clarifies the judgment being taught.
 - Name the invariant or critical rule early.
 - Make the source of truth visible where relevant.
 - Explain what fails under retries, partial failure, or migration.

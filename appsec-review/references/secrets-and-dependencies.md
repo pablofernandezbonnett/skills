@@ -17,8 +17,9 @@ artifacts, fixtures, exports, or dumps:
 trufflehog filesystem --no-verification --fail .
 ```
 
-Treat findings as blocking unless the value is clearly fake test data and the
-reason to ignore it is explicit.
+Verify scanner matches before reporting them. Treat a confirmed live secret
+as urgent, and explain whether it needs removal, rotation, or both. A match in
+test data may be dismissed when its purpose and lack of real access are clear.
 
 ## Dependency Vulnerability Checks
 
@@ -57,8 +58,8 @@ Lower priority:
 - low-confidence matches without a visible affected path
 - large result sets with no clear exploit relevance
 
-## Package Manager Bias
+## Package Manager Selection
 
-For JavaScript or TypeScript repositories, prefer `pnpm` and `pnpm-lock.yaml`
-as the source of truth unless the repository explicitly uses a different package
-manager.
+For JavaScript or TypeScript repositories, use the package manager and lockfile
+the project actually uses. If neither is clear, inspect configuration before
+choosing a scanner target or suggesting package commands.

@@ -1,225 +1,59 @@
 ---
 name: learning-material-author
-description: Use when creating or revising technical learning materials, study notes, topic explainers, learning paths, refresh docs, or documentation meant to teach clearly and reopen ideas quickly. This skill keeps the writing practical, plain-language, low-jargon, and reusable by explaining what a concept is, what problem it solves, why it matters, and what tradeoff or failure mode comes with it.
+description: Use when creating or revising technical learning materials, study notes, topic explainers, learning paths, refresh docs, or documentation meant to teach clearly and reopen ideas quickly. Keep explanations practical, plain-language, and grounded in evidence.
 ---
 
 # Learning Material Author
 
-## Overview
-
-Use this skill when writing or revising technical documentation whose job is to
-teach, refresh, or make a concept easier to reopen later.
-
-Default goal:
-
-- explain the concept in plain language
-- keep the smallest useful mental model visible
-- show why the idea exists and why it matters
-- expose weak reasoning versus stronger reasoning when the topic is about decisions
-- avoid buzzword-only explanations
-- keep the material practical, scannable, and technically defensible
-- keep factual claims grounded in real, non-invented information
-
-This skill is for learning-oriented documentation, not for product marketing,
-API reference generation, or theoretical textbook writing.
+Use this skill for documentation whose main job is to teach, refresh, or help
+someone make a technical decision. It does not target product marketing, API
+reference generation, or theoretical textbook coverage.
 
 ## Core Rule
 
-No jargon without why.
-
-If a term appears, explain quickly:
-
-- what it is
-- what problem it solves
-- why the reader should care
-- what tradeoff, limitation, or failure mode comes with it when relevant
-
-If the term's name is doing most of the explanatory work, the explanation is not
-finished yet.
+No jargon without why. For each key term, make its meaning, purpose, and
+practical importance clear. Explain a tradeoff or failure mode when it helps
+the reader use the idea correctly. Start with the smallest accurate mental
+model, then add only the detail the learning need calls for.
 
 ## Factual Accuracy
 
-Do not invent facts to make a document feel complete.
+- Do not invent facts to make a document feel complete.
+- Explain stable concepts from understanding. Verify vendor behavior, product
+  capabilities, standards, versions, and other changeable details against
+  current primary sources or direct repository evidence.
+- Identify an inference as an inference. For libraries, frameworks, SDKs,
+  APIs, CLIs, and cloud services, use current official documentation; use
+  Context7 when available to retrieve it.
 
-If the material names concrete vendor behavior, product capability, standard requirement, market fact, date-sensitive detail, or other claim that could be wrong or out of date:
+## Working Approach
 
-- verify it against a primary or otherwise high-trust source before stating it as fact
-- prefer official documentation, standards bodies, vendor docs, or direct repository evidence
-- say when you are making an inference instead of presenting it as a confirmed fact
+1. Identify the reader's confusion, decision, or task and show why the topic
+   matters to it.
+2. Give a short, accurate mental model before terminology or taxonomy.
+3. Add a small concrete example when it makes the idea easier to apply. Use
+   code when code is clearest; otherwise use a short scenario.
+4. Show a strong default and its main limitation when there is one. Contrast a
+   weak and stronger approach when the material teaches judgment; do not force
+   that structure onto a simple explanation.
+5. Keep the result easy to scan and reopen. Add a takeaway or a few primary
+   sources only when they improve later reuse.
 
-For stable concepts, explain from understanding.
-For unstable or vendor-specific details, verify before you teach.
+## Adapt To The Artifact
 
-When official documentation exists, prefer it over secondary summaries. For library, framework, SDK, API, CLI, cloud, or vendor-specific material, use the official docs as the default source of truth. If `context7` is available in the environment, prefer it to fetch current official documentation rather than relying on memory.
+- **Topic note or architecture explainer:** orient the reader, explain the
+  mechanism, then show the relevant decision or failure mode.
+- **Learning path:** show what prior knowledge transfers, what is missing, a
+  useful order, and the outcome of each phase.
+- **Cheatsheet or refresh doc:** compress after the meaning is clear; keep
+  definitions short without becoming cryptic.
 
-## Writing Priorities
+Follow the user's requested language. Otherwise follow the repository's
+documentation convention. Choose examples that fit the subject and audience
+rather than defaulting to one technical domain.
 
-Optimize for:
+## Further Guidance
 
-- clear study order
-- fast reopening of rusty topics
-- practical understanding
-- reusable explanations
-- low navigation friction
-- precise but simple wording
-
-Do not optimize for:
-
-- encyclopedic coverage
-- theory completeness
-- buzzword density
-- fancy target-state prose
-- consultant-style wording
-
-## Default Workflow
-
-1. Start from the real learning need.
-   Ask what confusion, decision, or mental gap the material should fix.
-
-2. Explain why this matters before going broader.
-   Make the practical value visible early so the reader knows what problem the
-   topic helps with.
-
-3. Define the smallest useful mental model first.
-   Say the idea in the fewest accurate lines before adding layers.
-
-4. Contrast weak reasoning with stronger reasoning when the topic is about
-   judgment.
-   Prefer `bad mental model vs better mental model` or `weak approach vs better
-   approach` when the reader needs help rejecting bad decisions.
-
-5. Add one small concrete example.
-   Prefer a minimal code example when code is the clearest way to show the
-   idea. If code would distract or the topic is more conceptual, use a small
-   word-based scenario instead. In both cases, prefer backend, architecture,
-   reliability, or data-flow examples over abstract theory.
-
-6. State the best approach or strong default when there is one.
-   Say what a sensible first choice looks like before diving into edge cases.
-
-7. Add the main tradeoff, failure mode, or caution.
-   Learning materials are stronger when they show where the idea breaks down or
-   what cost it introduces.
-
-8. End with a reusable takeaway when useful.
-   The reader should leave with one short idea they can remember and reuse.
-
-9. If the material teaches design or pattern choice, it may help to leave one
-   short, reusable explanation shape.
-   This is secondary to learning. Use it only when it helps compress the idea
-   and make the concept easier to explain later.
-
-10. Add a short `Further Reading` section when it improves durable study value.
-    Prefer a small set of high-signal links, with official documentation first.
-    Do not turn the doc into a link dump.
-
-## Shape By Document Type
-
-### Topic Note
-
-Good shape:
-
-1. why this matters
-2. smallest useful mental model
-3. bad mental model vs better mental model
-4. small concrete example
-5. best approach or strong default
-6. main tradeoff or failure mode
-7. short reusable takeaway
-8. optional reusable explanation shape when it genuinely helps the reader restate the idea later
-
-### Learning Path
-
-Good shape:
-
-1. role or skill transition
-2. what already transfers from the current background
-3. what still needs to be added
-4. recommended order by phases
-5. outcome per phase
-
-### Architecture Or Design Explainer
-
-Good shape:
-
-1. why this matters
-2. smallest useful mental model
-3. bad mental model vs better mental model
-4. small concrete example
-5. best approach or strong default
-6. main tradeoff, failure mode, or migration implication
-7. practical rule
-8. optional reusable explanation shape when it helps compress the decision clearly
-
-### Cheatsheet Or Refresh Doc
-
-Good shape:
-
-- reopen the concept quickly
-- keep terms short but not cryptic
-- compress only after the meaning is clear
-- prefer one-line definitions plus one caution
-
-## Style Rules
-
-- Use English for durable repository documentation unless repo rules say
-  otherwise.
-- Prefer direct, concrete wording.
-- Use short sections and flat lists.
-- Explain the idea in one to three lines before deepening it.
-- Use examples that are small enough to scan but real enough to defend.
-- Prefer a small code example when code clarifies the idea fastest. If code is
-  not the right vehicle, use a small word example or mini-scenario instead.
-- Prefer practical domain examples such as checkout, payments, merchants,
-  inventory, queues, retries, or data flows when they fit.
-
-## Good Patterns
-
-Use these patterns often when they clarify the concept:
-
-- bad mental model vs better mental model
-- weak approach vs better approach
-- bad example vs stronger example
-- plain-English version
-- why this matters
-- best approach
-
-These patterns help because they expose the decision boundary instead of only
-defining the term. For architecture, reliability, and solution-design material,
-these are often the default shape rather than optional decoration.
-
-## Anti-Patterns
-
-Avoid:
-
-- jargon introduced without purpose
-- vague slogans such as `scalable`, `secure`, `modern`, or `robust` without concrete meaning
-- theory-first openings when the practical need is clearer
-- long checklist sections with no mental model
-- false simplicity that breaks under light technical follow-up
-- mini-textbook drift when the job is refresh or study material
-
-## Decision Tests
-
-Before finalizing, check:
-
-- can the reader tell why this concept exists?
-- does each key term earn its place?
-- is the smallest useful meaning visible early?
-- is there at least one concrete example where helpful, using code when it clarifies the idea and a word example when it does not?
-- is the best approach or strong default visible when one exists?
-- is the main tradeoff, failure mode, or limitation visible?
-- are concrete factual claims grounded in repository evidence or a primary/current source rather than memory or invention?
-- would the material help reject a bad mental model or weak decision, not only describe a term?
-- if the note includes a short reusable explanation, does it help learning rather than shifting the doc into interview-prep mode?
-
-## References
-
-Read `references/style-rules.md` when you need the fuller rules for:
-
-- jargon control
-- learning-material structure
-- path-writing guidance
-- tradeoff explanation
-- duplicate control
-- documentation review heuristics
+Read [references/style-rules.md](references/style-rules.md) when the task needs
+detailed help with jargon, learning paths, architecture explanations, document
+overlap, or further-reading choices.

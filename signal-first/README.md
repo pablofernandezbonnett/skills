@@ -17,7 +17,8 @@ Use this skill when you want Codex responses to be:
 - direct
 - professional
 - technically precise
-- persistently high-signal for the rest of the thread unless relaxed on purpose
+- high-signal for the current request, or for the rest of the thread when
+  explicitly requested
 
 Main files:
 

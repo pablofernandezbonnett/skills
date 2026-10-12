@@ -3,7 +3,8 @@
 ## Base Principle
 
 - Credibility is more important than maximum optimization.
-- The candidate profile is the source of truth.
+- Use the candidate profile and verified work history as the fact base. Resolve
+  discrepancies before using a disputed claim.
 - If a sentence cannot be defended with a real example in a short interview answer, weaken or rewrite it.
 
 ## Truth Boundaries

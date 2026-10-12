@@ -24,8 +24,7 @@ Deliverables:
 - OWASP-aligned review workflow in `SKILL.md`
 - focused reference files for backend, frontend/mobile, and scanner usage
 - documentation written in plain English for repeatable use
-- package-manager bias set to `pnpm` for JS/TS repositories unless the repo
-  says otherwise
+- package-manager and lockfile selection grounded in the target repository
 
 ## Phase 2
 

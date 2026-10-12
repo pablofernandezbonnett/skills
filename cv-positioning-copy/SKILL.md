@@ -18,9 +18,9 @@ Default goal:
 ## Workflow
 
 1. Start from the source of truth.
-   In this repo, that is usually `JobHunting/CANDIDATE_PROFILE.yaml`. In other
-   repos or local setups, first identify the equivalent canonical profile or
-   fact base before rewriting anything.
+   Find the candidate's canonical profile or fact base in the current project.
+   If none exists, use only facts supported by the material the user provided
+   and flag material gaps before making claims that depend on them.
 
 2. Confirm what kind of artifact you are editing.
    Common cases:
@@ -74,13 +74,13 @@ Default goal:
 - Use only experience that clearly maps to the company or role pressure.
 - Do not claim missing depth just because the job description asks for it.
 
-## Source-of-Truth Order
+## Source-of-Truth Conflicts
 
-When there is tension, prefer this order:
-1. candidate profile
-2. verified work history and real examples
-3. market positioning
-4. job-description keyword coverage
+Treat the candidate profile and verified work history as evidence to reconcile,
+not a ranking where one silently overrides the other. If they conflict, flag
+the discrepancy and avoid the disputed claim until it is resolved. For
+framing choices that do not change the facts, prefer market positioning over
+job-description keyword coverage.
 
 ## References
 

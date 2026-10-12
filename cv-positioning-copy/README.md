@@ -18,9 +18,9 @@ Use this skill when refining:
 - a cover letter
 - a candidate summary or positioning paragraph
 
-Start from a real source-of-truth profile. In this repo that is usually
-`JobHunting/CANDIDATE_PROFILE.yaml`, but the skill is still usable elsewhere as
-long as there is one canonical fact base.
+Start from a real source-of-truth profile or verified work history in the
+project being edited. If they conflict, resolve the discrepancy before using
+the disputed claim.
 
 Main files:
 

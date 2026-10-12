@@ -56,8 +56,8 @@ It combines guided review with tools that are already useful and easy to trust:
 - `osv-scanner` for dependency vulnerability review when the repository has
   supported lockfiles or manifests
 
-For JavaScript and TypeScript repositories, the default package-manager bias is
-`pnpm`, not `npm`, unless the repository explicitly says otherwise.
+For JavaScript and TypeScript repositories, follow the project's package
+manager and lockfile.
 
 ## Main Files
 

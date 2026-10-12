@@ -49,9 +49,9 @@ not to recite generic best practices or pretend a full pentest happened.
 
 ## Stack Rules
 
-- For JavaScript or TypeScript repositories, prefer `pnpm` workflows and
-  `pnpm-lock.yaml`. Do not default to `npm` unless the repository already uses
-  it explicitly.
+- For JavaScript or TypeScript repositories, use the package manager and
+  lockfile already used by the project. If neither is established, inspect
+  project configuration before choosing commands or recommending changes.
 - Verify the manifest before suggesting any new security dependency or scanner.
 - Reuse the project's existing logger, validation layer, and security framework
   where possible.

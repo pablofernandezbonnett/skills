@@ -22,11 +22,12 @@ ordinary situations in Japan.
 
 ## Core writing rules
 
-### Make every Japanese expression readable
+### Make new Japanese expressions readable
 
-Every Japanese expression must include romaji and Spanish meaning in the same
-visual unit or immediately next to it. Apply this rule everywhere: headings,
-body prose, tables, dialogues, parenthetical notes, counters, and kanji.
+Give each new phrase or vocabulary item its romaji and Spanish meaning in the
+same visual unit or immediately next to it. This includes examples in headings,
+tables, dialogues, and prose. A later mention can omit the repetition when the
+reading and meaning remain easy to find nearby.
 
 Use one of these shapes:
 
@@ -41,7 +42,7 @@ Use one of these shapes:
 For inline text, keep the reading adjacent: `いちまい` (*ichimai*, una hoja o
 entrada).
 
-When kanji appears, include its kana reading as well as romaji and meaning:
+When introducing kanji, include its kana reading as well as romaji and meaning:
 `駅（えき）` (*eki*, estación). Do not assume the learner can infer a kanji
 reading from context.
 
@@ -94,7 +95,8 @@ sequence) are not interchangeable.
    Japanese README when the learning route or future-topic list changes.
 5. Check factual accuracy, especially readings, counters, particles, and
    polite request forms. When uncertain, verify before teaching it as a rule.
-6. Audit every Japanese string for an adjacent romaji and Spanish explanation.
+6. Audit new Japanese phrases and vocabulary for a nearby romaji reading and
+   Spanish explanation, and check that later mentions remain unambiguous.
    Use `rg -n --glob '*.md' '[ぁ-んァ-ン一-龯]' <target>` as a review list, then
    inspect the results manually; the command is a prompt for review, not proof.
 7. Run the repository's Markdown verification when available, plus
@@ -113,7 +115,7 @@ sequence) are not interchangeable.
 
 ## Avoid
 
-- Japanese text without romaji, including incidental examples in prose.
+- New Japanese expressions without romaji and Spanish meaning.
 - Response-only flashcard phrases with no question context.
 - Dense conjugation tables, advanced politeness distinctions, or exhaustive
   counter inventories before a real need appears.
